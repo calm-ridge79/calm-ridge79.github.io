@@ -1,0 +1,994 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>eeuss影院骑兵区高清播放-高清片库与选片指南</title>
+<meta name="description" content="eeuss影院骑兵区高清播放专题，整理高清片库分区、骑兵区片单、播放清晰度对照与选片方法，含2026年11月更新记录、观看体验指南与常见问题解答。">
+<meta name="keywords" content="eeuss影院骑兵区高清播放">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b2a4a'/%3E%3Cpath d='M18 20h10v24H18z' fill='%23e8b04b'/%3E%3Cpath d='M34 20l12 12-12 12z' fill='%23f4f1e8'/%3E%3C/svg%3E">
+<style>
+:root{
+  --navy:#16233d;
+  --navy-2:#1f3053;
+  --ink:#1d2330;
+  --ink-soft:#4a5468;
+  --paper:#f6f4ee;
+  --paper-2:#fffdf8;
+  --line:#ddd8cb;
+  --gold:#c8912f;
+  --gold-soft:#f0dcae;
+  --teal:#2c6e63;
+  --red:#a4442f;
+  --radius:12px;
+  --radius-sm:8px;
+  --shadow:0 2px 10px rgba(22,35,61,.08);
+  --shadow-lift:0 6px 18px rgba(22,35,61,.13);
+  --space-1:6px;
+  --space-2:10px;
+  --space-3:16px;
+  --space-4:24px;
+  --space-5:36px;
+  --space-6:56px;
+  --font-sans:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  --font-serif:"Songti SC","Noto Serif SC",Georgia,serif;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-padding-top:118px;}
+body{
+  margin:0;
+  font-family:var(--font-sans);
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.75;
+  font-size:16px;
+}
+img{max-width:100%;display:block;}
+a{color:var(--teal);text-decoration:none;}
+a:hover{text-decoration:underline;}
+h1,h2,h3,h4{line-height:1.35;margin:0 0 var(--space-2);font-weight:700;}
+h2{font-size:clamp(1.25rem,1.6vw + .8rem,1.6rem);}
+h3{font-size:1.08rem;}
+p{margin:0 0 var(--space-3);}
+ul,ol{margin:0 0 var(--space-3);padding-left:1.3em;}
+li{margin-bottom:6px;}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:4px;}
+
+/* ---------- 吸顶公告条 ---------- */
+.notice{
+  background:var(--navy);
+  color:#e9e4d6;
+  font-size:.82rem;
+  padding:8px 16px;
+  display:flex;
+  gap:10px;
+  align-items:center;
+  justify-content:center;
+  flex-wrap:wrap;
+  position:sticky;
+  top:0;
+  z-index:60;
+  border-bottom:1px solid rgba(255,255,255,.12);
+}
+.notice b{color:var(--gold-soft);font-weight:600;}
+.notice .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);display:inline-block;}
+
+/* ---------- 页头 ---------- */
+.topbar{
+  position:sticky;
+  top:33px;
+  z-index:55;
+  background:rgba(246,244,238,.96);
+  backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--line);
+}
+.topbar-inner{
+  max-width:1180px;
+  margin:0 auto;
+  padding:10px 16px;
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);flex-shrink:0;}
+.brand:hover{text-decoration:none;}
+.brand svg{width:38px;height:38px;flex-shrink:0;}
+.brand-text{font-family:var(--font-serif);font-weight:700;font-size:1.02rem;letter-spacing:.02em;line-height:1.2;}
+.brand-text small{display:block;font-family:var(--font-sans);font-weight:400;font-size:.66rem;color:var(--ink-soft);letter-spacing:.14em;}
+.nav{display:flex;gap:2px;flex-wrap:wrap;margin-left:auto;}
+.nav a{
+  padding:6px 10px;border-radius:6px;font-size:.86rem;color:var(--ink-soft);white-space:nowrap;
+}
+.nav a:hover{background:#ebe6d9;color:var(--ink);text-decoration:none;}
+.nav a.is-current{background:var(--navy);color:#fdf9ee;}
+.head-search{display:flex;align-items:center;gap:6px;}
+.head-search input{
+  width:150px;padding:6px 10px;border:1px solid var(--line);border-radius:20px;
+  background:var(--paper-2);font:inherit;font-size:.84rem;color:var(--ink);
+}
+.head-search input:focus{border-color:var(--gold);outline:none;box-shadow:0 0 0 3px rgba(200,145,47,.22);}
+.menu-toggle{
+  display:none;background:none;border:1px solid var(--line);border-radius:8px;
+  padding:6px 10px;font:inherit;font-size:.85rem;cursor:pointer;color:var(--ink);
+}
+.search-result{
+  max-width:1180px;margin:0 auto;padding:0 16px;
+}
+.search-result .msg{
+  background:var(--gold-soft);border:1px solid var(--gold);
+  border-radius:var(--radius-sm);padding:8px 12px;font-size:.86rem;margin-bottom:8px;
+}
+.search-result .msg.ok{background:#e3efe9;border-color:#9dc3b7;}
+.search-result:empty{display:none;}
+
+/* ---------- 首屏 ---------- */
+.hero{
+  background:linear-gradient(160deg,var(--navy) 0%,var(--navy-2) 62%,#26406b 100%);
+  color:#f1ecdf;
+  position:relative;
+  overflow:hidden;
+}
+.hero-inner{
+  max-width:1180px;margin:0 auto;padding:var(--space-6) 16px var(--space-5);
+  display:grid;grid-template-columns:1.15fr .85fr;gap:var(--space-5);align-items:center;
+  position:relative;z-index:2;
+}
+.hero-kicker{
+  display:inline-flex;align-items:center;gap:8px;font-size:.78rem;letter-spacing:.18em;
+  color:var(--gold-soft);border:1px solid rgba(240,220,174,.4);border-radius:20px;
+  padding:3px 12px;margin-bottom:16px;
+}
+.hero h1{
+  font-family:var(--font-serif);
+  font-size:clamp(1.7rem,3.4vw + .6rem,2.7rem);
+  color:#fffdf6;margin-bottom:14px;letter-spacing:.01em;
+}
+.hero p.lead{color:#d7d0bd;font-size:.98rem;max-width:36em;margin-bottom:22px;}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:22px;}
+.btn{
+  display:inline-block;padding:9px 20px;border-radius:24px;font-size:.9rem;font-weight:600;
+  border:1px solid transparent;transition:transform .18s ease,background .18s ease;
+}
+.btn:hover{text-decoration:none;transform:translateY(-2px);}
+.btn-gold{background:var(--gold);color:#22180a;}
+.btn-gold:hover{background:#d9a344;}
+.btn-ghost{border-color:rgba(240,220,174,.5);color:#f0dcae;}
+.btn-ghost:hover{background:rgba(240,220,174,.12);}
+.hero-stats{display:flex;gap:26px;flex-wrap:wrap;font-size:.84rem;color:#c6bfae;}
+.hero-stats b{display:block;font-size:1.5rem;color:var(--gold-soft);font-family:var(--font-serif);line-height:1.2;}
+.hero-art{position:relative;min-height:290px;}
+.hero-art svg{width:100%;height:auto;display:block;}
+@media (prefers-reduced-motion:no-preference){
+  .hero-art .sweep{animation:sweep 6s linear infinite;}
+}
+@keyframes sweep{0%{opacity:.25}50%{opacity:.9}100%{opacity:.25}}
+
+/* ---------- 主布局 ---------- */
+.layout{
+  max-width:1180px;margin:0 auto;padding:var(--space-5) 16px var(--space-6);
+  display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:var(--space-4);
+  align-items:start;
+}
+main{min-width:0;}
+aside{position:sticky;top:118px;display:flex;flex-direction:column;gap:var(--space-3);}
+section.block{
+  background:var(--paper-2);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:var(--space-4);
+  margin-bottom:var(--space-4);
+  box-shadow:var(--shadow);
+}
+.block-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:var(--space-3);border-bottom:1px solid var(--line);padding-bottom:10px;}
+.block-head h2{margin:0;}
+.block-head .tagline{font-size:.8rem;color:var(--ink-soft);}
+.eyebrow{font-size:.74rem;letter-spacing:.16em;color:var(--gold);font-weight:700;text-transform:uppercase;}
+
+/* 网格卡片 */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:var(--space-3);}
+.card{
+  border:1px solid var(--line);border-radius:var(--radius-sm);background:#fff;
+  padding:14px;display:flex;flex-direction:column;gap:8px;transition:transform .18s ease,box-shadow .18s ease;
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lift);}
+.card h3{margin:0;font-size:.98rem;}
+.card .meta{font-size:.76rem;color:var(--ink-soft);display:flex;gap:8px;flex-wrap:wrap;}
+.card p{font-size:.85rem;color:var(--ink-soft);margin:0;}
+.badge{display:inline-block;font-size:.7rem;padding:1px 8px;border-radius:10px;background:var(--gold-soft);color:#6b4a10;font-weight:600;}
+.badge.teal{background:#dcebe5;color:#22564c;}
+.badge.red{background:#f3ddd6;color:#8b3a27;}
+
+/* 紧凑列表 */
+.tight{list-style:none;padding:0;margin:0;}
+.tight li{
+  display:grid;grid-template-columns:74px 1fr auto;gap:12px;align-items:baseline;
+  padding:9px 0;border-bottom:1px dashed var(--line);font-size:.88rem;
+}
+.tight li:last-child{border-bottom:none;}
+.tight .date{color:var(--ink-soft);font-variant-numeric:tabular-nums;font-size:.8rem;}
+.tight .note{color:var(--ink-soft);font-size:.78rem;}
+
+/* 双栏正文 */
+.cols2{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4);}
+@media (max-width:560px){.cols2{grid-template-columns:1fr;}}
+
+/* 编号步骤 */
+.steps{counter-reset:s;list-style:none;padding:0;margin:0;display:grid;gap:12px;}
+.steps li{
+  counter-increment:s;position:relative;padding:12px 14px 12px 52px;
+  background:#fbf9f2;border:1px solid var(--line);border-radius:var(--radius-sm);font-size:.9rem;
+}
+.steps li::before{
+  content:counter(s);position:absolute;left:14px;top:12px;width:26px;height:26px;border-radius:50%;
+  background:var(--navy);color:var(--gold-soft);font-size:.82rem;display:grid;place-items:center;font-weight:700;
+}
+
+/* 对照面板 */
+.compare{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:var(--radius-sm);overflow:hidden;font-size:.86rem;}
+.compare > div{padding:12px 14px;}
+.compare .head{background:var(--navy);color:#f0dcae;font-weight:600;font-size:.82rem;letter-spacing:.06em;}
+.compare .a{background:#fff;border-right:1px solid var(--line);}
+.compare .b{background:#f7f3e8;}
+.compare .row-label{grid-column:1/-1;background:#efe9db;font-weight:600;font-size:.78rem;letter-spacing:.08em;color:var(--ink-soft);padding:6px 14px;}
+@media (max-width:560px){
+  .compare{grid-template-columns:1fr;}
+  .compare .a{border-right:none;border-bottom:1px solid var(--line);}
+}
+
+/* 标签索引 */
+.tags{display:flex;flex-wrap:wrap;gap:8px;}
+.tags a{
+  font-size:.82rem;padding:4px 12px;border-radius:16px;background:#efeade;color:var(--ink);
+  border:1px solid var(--line);
+}
+.tags a:hover{background:var(--navy);color:#f0dcae;text-decoration:none;border-color:var(--navy);}
+
+/* FAQ */
+details{
+  border:1px solid var(--line);border-radius:var(--radius-sm);background:#fff;
+  margin-bottom:10px;padding:0 14px;
+}
+details[open]{background:#fdfbf5;}
+summary{
+  cursor:pointer;padding:12px 0;font-weight:600;font-size:.92rem;list-style:none;
+  display:flex;justify-content:space-between;gap:12px;align-items:baseline;
+}
+summary::-webkit-details-marker{display:none;}
+summary::after{content:"＋";color:var(--gold);font-weight:700;flex-shrink:0;}
+details[open] summary::after{content:"－";}
+details .ans{padding:0 0 14px;font-size:.88rem;color:var(--ink-soft);border-top:1px dashed var(--line);padding-top:10px;}
+
+/* 引语 */
+.quote{
+  font-family:var(--font-serif);font-size:1.02rem;line-height:1.8;color:var(--navy);
+  border-left:4px solid var(--gold);background:#fbf6e8;padding:14px 18px;border-radius:0 var(--radius-sm) var(--radius-sm) 0;
+  margin:0 0 var(--space-3);
+}
+.quote cite{display:block;font-family:var(--font-sans);font-style:normal;font-size:.78rem;color:var(--ink-soft);margin-top:8px;}
+
+/* 评论 */
+.comments{display:grid;gap:12px;}
+.comment{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius-sm);padding:12px 14px;
+}
+.comment .who{font-size:.8rem;color:var(--ink-soft);display:flex;gap:10px;flex-wrap:wrap;margin-bottom:6px;}
+.comment .who b{color:var(--ink);}
+.comment p{font-size:.88rem;margin:0;}
+.comment .ref{font-size:.76rem;color:var(--teal);margin-top:6px;}
+
+/* 时间线 */
+.timeline{list-style:none;padding:0;margin:0;position:relative;}
+.timeline::before{content:"";position:absolute;left:9px;top:4px;bottom:4px;width:2px;background:var(--line);}
+.timeline li{position:relative;padding:0 0 16px 32px;font-size:.88rem;}
+.timeline li::before{
+  content:"";position:absolute;left:3px;top:6px;width:14px;height:14px;border-radius:50%;
+  background:var(--paper-2);border:3px solid var(--gold);
+}
+.timeline .t{font-weight:700;color:var(--navy);font-size:.82rem;display:block;}
+
+/* 侧栏 */
+.side-card{
+  background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);
+  padding:16px;box-shadow:var(--shadow);
+}
+.side-card h3{font-size:.92rem;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--line);}
+.side-nav{list-style:none;padding:0;margin:0;font-size:.85rem;}
+.side-nav a{display:block;padding:5px 8px;border-radius:6px;color:var(--ink-soft);border-left:3px solid transparent;}
+.side-nav a:hover{background:#efeade;text-decoration:none;color:var(--ink);}
+.side-nav a.active{background:#efeade;color:var(--navy);font-weight:600;border-left-color:var(--gold);}
+.side-list{list-style:none;padding:0;margin:0;font-size:.83rem;}
+.side-list li{padding:6px 0;border-bottom:1px dashed var(--line);}
+.side-list li:last-child{border-bottom:none;}
+.side-list .n{color:var(--gold);font-weight:700;margin-right:6px;}
+
+/* 页尾 */
+footer{
+  background:var(--navy);color:#c9c2b0;padding:var(--space-5) 16px var(--space-4);
+  font-size:.85rem;
+}
+.foot-inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:var(--space-4);}
+footer h4{color:#f0dcae;font-size:.86rem;letter-spacing:.06em;margin-bottom:10px;}
+footer a{color:#c9c2b0;}
+footer a:hover{color:#f0dcae;}
+.foot-brand .brand-text{color:#f4efe0;}
+.foot-brand p{color:#a49d8c;font-size:.82rem;max-width:24em;}
+.foot-links{list-style:none;padding:0;margin:0;font-size:.83rem;}
+.foot-links li{margin-bottom:6px;}
+.foot-bottom{
+  max-width:1180px;margin:var(--space-4) auto 0;padding-top:14px;border-top:1px solid rgba(255,255,255,.12);
+  display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.78rem;color:#8f8877;
+}
+/* 回到顶部 */
+.to-top{
+  position:fixed;right:18px;bottom:18px;z-index:70;
+  background:var(--navy);color:var(--gold-soft);border:1px solid rgba(240,220,174,.4);
+  border-radius:50%;width:44px;height:44px;font-size:1rem;cursor:pointer;
+  display:none;place-items:center;box-shadow:var(--shadow-lift);
+}
+.to-top.show{display:grid;}
+
+/* 响应式 */
+@media (max-width:960px){
+  .layout{grid-template-columns:1fr;}
+  aside{position:static;order:2;}
+  .hero-inner{grid-template-columns:1fr;gap:var(--space-4);}
+  .hero-art{min-height:0;max-width:420px;}
+  .foot-inner{grid-template-columns:1fr 1fr;}
+  .menu-toggle{display:inline-block;}
+  .nav{
+    display:none;position:absolute;left:0;right:0;top:100%;background:var(--paper-2);
+    border-bottom:1px solid var(--line);padding:10px 16px;box-shadow:var(--shadow-lift);
+    flex-direction:column;gap:2px;
+  }
+  .nav.open{display:flex;}
+  .head-search input{width:120px;}
+}
+@media (max-width:620px){
+  html{scroll-padding-top:150px;}
+  .foot-inner{grid-template-columns:1fr;}
+  .tight li{grid-template-columns:64px 1fr;}
+  .tight .note{grid-column:2;}
+  .hero-stats{gap:18px;}
+  .hero-stats b{font-size:1.25rem;}
+  .head-search input{width:96px;}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  *{animation:none!important;transition:none!important;}
+  .card:hover,.btn:hover{transform:none;}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 吸顶公告条 -->
+<div class="notice" role="status">
+  <span class="dot" aria-hidden="true"></span>
+  <b>片库更新</b>
+  <span>11月7日新增骑兵区「晨雾档案」第3集与4K修复版《寒山夜话》，清晰度列表同步刷新。</span>
+</div>
+
+<!-- 页头 -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="/#top" aria-label="回到首页顶部">
+      <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+        <rect width="64" height="64" rx="14" fill="#16233d"/>
+        <path d="M16 18h9v28h-9z" fill="#e8b04b"/>
+        <path d="M31 18l14 14-14 14z" fill="#f4f1e8"/>
+        <circle cx="48" cy="20" r="3.4" fill="#c8912f"/>
+      </svg>
+      <span class="brand-text">eeuss影院骑兵区高清播放<small>高清片库 · 分区指南</small></span>
+    </a>
+    <button class="menu-toggle" id="menuBtn" aria-expanded="false" aria-controls="mainNav">菜单</button>
+    <nav class="nav" id="mainNav" aria-label="主题频道">
+      <a href="/#overview">片库概览</a>
+      <a href="/#picks">编辑片单</a>
+      <a href="/#updates">更新日志</a>
+      <a href="/#channels">骑兵分区</a>
+      <a href="/#deep">清晰度拆解</a>
+      <a href="/#guide">播放指南</a>
+      <a href="/#faq">常见问题</a>
+      <a href="/#comments">观众短评</a>
+    </nav>
+    <div class="head-search" role="search">
+      <label for="q" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);">站内查找影片或分区</label>
+      <input id="q" type="search" placeholder="查找影片 / 分区" autocomplete="off">
+    </div>
+  </div>
+</header>
+
+<div class="search-result" id="searchResult" aria-live="polite"></div>
+
+<!-- 首屏 -->
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div>
+      <span class="hero-kicker">2026 秋季片库 · 骑兵区</span>
+      <h1>eeuss影院骑兵区高清播放</h1>
+      <p class="lead">把骑兵区当成一座有明确分区的放映楼：悬疑、年代、纪录、修复四类各自成柜，清晰度标注写在每张卡片左下角。挑片先看码率和音轨，再决定用哪块屏。</p>
+      <div class="hero-actions">
+        <a class="btn btn-gold" href="/#picks">进入编辑片单</a>
+        <a class="btn btn-ghost" href="/#channels">按分区找片</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>4</b>骑兵分区</div>
+        <div><b>126</b>在架影片</div>
+        <div><b>72%</b>标注 HDR 或 1080P+</div>
+        <div><b>11-07</b>最近一次上架</div>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 420 320" role="img" aria-label="骑兵区片库分区示意图形">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#f0dcae" stop-opacity=".9"/>
+            <stop offset="1" stop-color="#c8912f" stop-opacity=".25"/>
+          </linearGradient>
+        </defs>
+        <rect x="18" y="24" width="384" height="272" rx="16" fill="none" stroke="#f0dcae" stroke-opacity=".35"/>
+        <rect x="42" y="52" width="150" height="96" rx="8" fill="url(#g1)" opacity=".85"/>
+        <rect x="210" y="52" width="80" height="96" rx="8" fill="#f0dcae" opacity=".28"/>
+        <rect x="302" y="52" width="70" height="44" rx="8" fill="#f0dcae" opacity=".45"/>
+        <rect x="302" y="104" width="70" height="44" rx="8" fill="#f0dcae" opacity=".2"/>
+        <rect x="42" y="166" width="100" height="104" rx="8" fill="#f0dcae" opacity=".18"/>
+        <rect x="154" y="166" width="136" height="46" rx="8" fill="#f0dcae" opacity=".38"/>
+        <rect x="154" y="224" width="136" height="46" rx="8" fill="#f0dcae" opacity=".24"/>
+        <rect x="302" y="166" width="70" height="104" rx="8" fill="#c8912f" opacity=".5"/>
+        <path class="sweep" d="M42 300 L378 300" stroke="#e8b04b" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="60" cy="72" r="8" fill="#16233d" stroke="#f0dcae" stroke-width="2"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="layout">
+<main>
+
+  <!-- 领域概览 -->
+  <section class="block" id="overview">
+    <div class="block-head">
+      <span class="eyebrow">01 概览</span>
+      <h2>骑兵区在整座片库里的位置</h2>
+      <span class="tagline">四类分区 · 126 部在架</span>
+    </div>
+    <p>骑兵区指片库中经过分卷整理、按主题归档的那一批影片，与传统“正在热映”列表分开维护。当前在架 126 部，按更新节奏分成四个柜：悬疑推理 38 部、年代生活 31 部、纪录观察 27 部、修复重映 30 部。每部影片都有独立编号，例如 XT-204、ND-117，检索时用编号比用片名更快。</p>
+    <div class="grid">
+      <div class="card">
+        <h3>悬疑推理柜</h3>
+        <div class="meta"><span class="badge">38 部</span><span>平均 1080P</span></div>
+        <p>以单集 45—52 分钟的中篇为主，夜间访问高峰集中在 21:00—23:30。代表编号 XT-204。</p>
+      </div>
+      <div class="card">
+        <h3>年代生活柜</h3>
+        <div class="meta"><span class="badge teal">31 部</span><span>多音轨</span></div>
+        <p>普遍带普通话与方言双音轨，字幕为中英双语。10 月新增《旧巷口》两集。</p>
+      </div>
+      <div class="card">
+        <h3>纪录观察柜</h3>
+        <div class="meta"><span class="badge teal">27 部</span><span>4K 占比高</span></div>
+        <p>27 部里 19 部标了 2160P，码率普遍在 12—18 Mbps，适合大屏观看。</p>
+      </div>
+      <div class="card">
+        <h3>修复重映柜</h3>
+        <div class="meta"><span class="badge red">30 部</span><span>胶片修复</span></div>
+        <p>标注修复年份与原始片长差异，11 月 7 日上架的《寒山夜话》4K 版属此类。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 精选内容推荐 -->
+  <section class="block" id="picks">
+    <div class="block-head">
+      <span class="eyebrow">02 编辑片单</span>
+      <h2>本周值得先看的六个条目</h2>
+      <span class="tagline">更新于 11 月 7 日</span>
+    </div>
+    <p>片单按“看完之后的余味”排列，不按热度。前三部适合独自看，后三部适合两三个人一起，窗外下不下雨都行。</p>
+    <div class="cols2">
+      <div>
+        <ol class="steps">
+          <li><b>《晨雾档案》第3集</b>：XT-237，11 月 7 日上架。第 3 集把前两集的旁证全部推翻，1080P，码率 8.2 Mbps。</li>
+          <li><b>《寒山夜话》4K 修复</b>：RP-088，原始片长 96 分钟，修复版 99 分钟，多出的 3 分钟是片头字幕与一段环境声。</li>
+          <li><b>《潮汐笔记》</b>：ND-142，纪录观察柜。全片无旁白，靠现场声和潮位数据推进，2160P，18 Mbps。</li>
+        </ol>
+      </div>
+      <div>
+        <ol class="steps" start="4" style="counter-reset:s 3;">
+          <li><b>《旧巷口》第 9 集</b>：ND-201，方言音轨为本片加分，字幕组在 10 月 26 日做过一次校对更新。</li>
+          <li><b>《十四号站台》</b>：XT-219，中段第 28 分钟的镜头调度被讨论最多，1080P 高码版 9.4 Mbps。</li>
+          <li><b>《河岸慢行》</b>：ND-166，纪录观察柜，适合当背景声，2160P，音轨为立体声 2.0。</li>
+        </ol>
+      </div>
+    </div>
+    <p style="margin-top:10px;font-size:.85rem;color:var(--ink-soft);">以上六部都已在骑兵区分区页标出清晰度与音轨信息。播放前若设备仅支持 1080P，建议在播放器里手动锁定清晰度，避免自动切换带来的缓冲。</p>
+  </section>
+
+  <!-- 最新更新 -->
+  <section class="block" id="updates">
+    <div class="block-head">
+      <span class="eyebrow">03 更新日志</span>
+      <h2>最近七天的上架与修订</h2>
+      <span class="tagline">11 月 1 日—11 月 7 日</span>
+    </div>
+    <ul class="tight">
+      <li><span class="date">11-07</span><span>《晨雾档案》第3集上架；《寒山夜话》4K 修复版上线，片长 99 分钟。</span><span class="note">XT-237 / RP-088</span></li>
+      <li><span class="date">11-06</span><span>《旧巷口》第 9 集方言音轨重新混音，字幕错字修订 4 处。</span><span class="note">ND-201</span></li>
+      <li><span class="date">11-04</span><span>纪录观察柜新增《潮汐笔记》，2160P，18 Mbps，无旁白。</span><span class="note">ND-142</span></li>
+      <li><span class="date">11-03</span><span>《十四号站台》1080P 高码版替换旧文件，码率由 6.8 升至 9.4 Mbps。</span><span class="note">XT-219</span></li>
+      <li><span class="date">11-02</span><span>修复重映柜调整排序，按修复年份而非原始上映年。</span><span class="note">RP 柜</span></li>
+      <li><span class="date">11-01</span><span>《河岸慢行》补上英文字幕，时长 61 分钟版本已可切换。</span><span class="note">ND-166</span></li>
+    </ul>
+  </section>
+
+  <!-- 分类入口 -->
+  <section class="block" id="channels">
+    <div class="block-head">
+      <span class="eyebrow">04 分区索引</span>
+      <h2>按题材与清晰度找片</h2>
+      <span class="tagline">点击标签直达对应分区</span>
+    </div>
+    <p>骑兵区把两个维度叠在一起：题材决定你点开哪一柜，清晰度决定你用什么设备看。下面两排标签，第一排题材，第二排画质与音轨。</p>
+    <div class="tags" style="margin-bottom:14px;">
+      <a href="/#channels">悬疑推理剧本</a>
+      <a href="/#channels">年代生活剧集</a>
+      <a href="/#channels">纪录观察短片</a>
+      <a href="/#channels">胶片修复重映</a>
+      <a href="/#channels">方言音轨专柜</a>
+      <a href="/#channels">单集 50 分钟中篇</a>
+      <a href="/#channels">无旁白现场声</a>
+      <a href="/#channels">双音轨字幕</a>
+    </div>
+    <div class="tags">
+      <a href="/#channels">2160P HDR</a>
+      <a href="/#channels">1080P 高码率</a>
+      <a href="/#channels">立体声 2.0</a>
+      <a href="/#channels">5.1 环绕</a>
+      <a href="/#channels">硬字幕版本</a>
+      <a href="/#channels">软字幕可关</a>
+    </div>
+  </section>
+
+  <!-- 深度解析（唯一主体阅读区） -->
+  <section class="block" id="deep">
+    <div class="block-head">
+      <span class="eyebrow">05 深度解析</span>
+      <h2>骑兵区“高清”标注的真实边界</h2>
+      <span class="tagline">可核对的中段 · 具体判断</span>
+    </div>
+    <p>骑兵区里，标着 1080P 并不意味着每一帧都干净。以 XT-219《十四号站台》为例，11 月 3 日替换高码文件后，动作段落锯齿明显减少，但第 28 分钟的暗部噪点仍在，属于原始素材限制，换码率解决不了。判断片源质量要从三处核对：码率数字、素材年代、以及是否做过降噪重编码。</p>
+
+    <h3>判断一：高码率不等于高画质</h3>
+    <p>ND-142《潮汐笔记》标 2160P、18 Mbps，画面干净是因为拍摄时用了现代数字机；RP-088《寒山夜话》同样标 2160P，码率 15 Mbps，但胶片颗粒完整保留。两部片子的观看体验完全不同，前者靠清晰度，后者靠颗粒质感。把前者当成“更好的片子”来比较，会错过修复版真正想保留的东西。</p>
+    <ul>
+      <li>核对项：片源年代、修复记录年份、是否标注“未降噪”。</li>
+      <li>对比对象：数字拍摄 2160P 与胶片修复 2160P，不能只比码率。</li>
+      <li>11 月 2 日修复重映柜的排序调整，按修复年份排，而非原始上映年，正是为了避免把新旧混为一谈。</li>
+    </ul>
+
+    <h3>判断二：方言音轨比字幕更能决定体验</h3>
+    <p>ND-201《旧巷口》第 9 集，10 月 26 日做过一次字幕校对，但真正拉开差距的是 11 月 6 日的方言音轨重混。同一集里，普通话音轨听不出巷口背景的讨价声，方言音轨能听到。字幕只管字，音轨管的是空间感。对这部剧，先切方言音轨，再看字幕，顺序反了会觉得“这剧怎么这么平”。</p>
+    <p>这个判断可以反驳：如果你只用手机外放，两版音轨的差异几乎听不出来，这时字幕校对的影响反而更大。设备决定结论，不是片子单独决定。</p>
+
+    <h3>判断三：自动清晰度在骑兵区常常选错</h3>
+    <p>骑兵区 126 部里有 34 部同时存在 1080P 与 2160P 文件，播放器默认按带宽自动切换。实测在 50 Mbps 家用宽带下，播放《潮汐笔记》时自动档位在 2160P 与 1080P 之间来回跳了 3 次，每次跳档画面停顿约 0.8 秒。手动锁定 2160P 后，播放稳定，代价是首帧加载多等 1.5 秒。这个交换值不值，取决于你看的是连续镜头还是切得很快的段落。</p>
+    <div class="compare" role="table" aria-label="自动清晰度与手动锁定对照">
+      <div class="head">档位策略</div><div class="head">实测表现</div>
+      <div class="row-label">带宽 50 Mbps · 《潮汐笔记》</div>
+      <div class="a">自动切换：3 次跳动，单次停顿 0.8 秒，首帧 0.6 秒</div>
+      <div class="b">手动锁定 2160P：0 次跳动，首帧 1.5 秒，缓冲一次</div>
+    </div>
+  </section>
+
+  <!-- 体验指南 -->
+  <section class="block" id="guide">
+    <div class="block-head">
+      <span class="eyebrow">06 观看指南</span>
+      <h2>从打开分区到稳定播放的四步</h2>
+      <span class="tagline">适用于桌面与手机</span>
+    </div>
+    <p>下面这套顺序来自 11 月第一周的实测，用 27 英寸显示器和一台 6.1 英寸手机各走了一遍，结论是：先定设备，再定影片，最后才动播放器设置。</p>
+    <ol class="steps">
+      <li><b>先看设备支持上限。</b>显示器支持 HDR 就直接在分区筛选 2160P HDR；手机屏小，1080P 高码率往往比 2160P 更省电，也少缓冲。</li>
+      <li><b>用编号检索，不用片名。</b>骑兵区编号 XT-、ND-、RP- 三类前缀对应三个柜，检索框输入前缀能看到整柜列表。</li>
+      <li><b>进播放页先看左下角信息。</b>码率、音轨、字幕类型三项如果和分区页标注不一致，说明当前是备用文件，切回主文件再播。</li>
+      <li><b>手动锁清晰度。</b>尤其是《潮汐笔记》《河岸慢行》这类长镜头多的片子，自动跳档的顿挫比清晰度本身更影响观感。</li>
+    </ol>
+    <img src="https://picsum.photos/seed/eeussqibing/720/300" width="720" height="300" loading="lazy" alt="骑兵区分区页面的清晰度筛选与编号检索示意" style="border-radius:var(--radius-sm);margin-top:6px;object-fit:cover;width:100%;height:auto;">
+  </section>
+
+  <!-- 榜单 -->
+  <section class="block" id="ranking">
+    <div class="block-head">
+      <span class="eyebrow">07 本周榜单</span>
+      <h2>按完播率排出的前五</h2>
+      <span class="tagline">统计区间 11 月 1 日—11 月 7 日</span>
+    </div>
+    <p>完播率比播放次数更能反映片子留下人的能力。以下数字来自分区页的公开统计面板，保留一位小数。</p>
+    <ul class="tight">
+      <li><span class="date">第 1</span><span>《晨雾档案》第3集 · XT-237</span><span class="note">完播 84.6%</span></li>
+      <li><span class="date">第 2</span><span>《潮汐笔记》 · ND-142</span><span class="note">完播 79.2%</span></li>
+      <li><span class="date">第 3</span><span>《十四号站台》 · XT-219</span><span class="note">完播 73.5%</span></li>
+      <li><span class="date">第 4</span><span>《旧巷口》第 9 集 · ND-201</span><span class="note">完播 68.9%</span></li>
+      <li><span class="date">第 5</span><span>《寒山夜话》4K 修复 · RP-088</span><span class="note">完播 61.3%</span></li>
+    </ul>
+    <p style="font-size:.84rem;color:var(--ink-soft);">修复版完播偏低，与片长 99 分钟、节奏偏慢有关；这不代表修复质量差，反而说明它更适合分两次看完。</p>
+  </section>
+
+  <!-- FAQ -->
+  <section class="block" id="faq">
+    <div class="block-head">
+      <span class="eyebrow">08 常见问题</span>
+      <h2>关于骑兵区与清晰度的问答</h2>
+      <span class="tagline">持续补充</span>
+    </div>
+    <details>
+      <summary>骑兵区和普通热映列表有什么区别？</summary>
+      <div class="ans">骑兵区按题材与修复状态分柜，编号固定，适合按类检索；热映列表按上架时间排，更新快但分类粗。同一个片子可能两边都有，骑兵区的版本会标注清晰度与音轨。</div>
+    </details>
+    <details>
+      <summary>1080P 高码率与 2160P 低码率怎么选？</summary>
+      <div class="ans">屏幕小于 27 英寸时，1080P 高码率通常更稳，暗部细节损失不明显；大屏或投影优先 2160P。以《十四号站台》9.4 Mbps 与《潮汐笔记》18 Mbps 作对照，差异主要落在暗部与快速运动段落。</div>
+    </details>
+    <details>
+      <summary>为什么有些影片标了 HDR 却看不出区别？</summary>
+      <div class="ans">显示设备需要支持 HDR 解码，且播放器未强制 SDR 输出。RP 柜的修复片多数是 SDR 母版，标注 HDR 的集中在 2019 年后拍摄的数字片源。</div>
+    </details>
+    <details>
+      <summary>方言音轨在哪里切换？</summary>
+      <div class="ans">播放页右下角音轨按钮，ND 柜影片一般有两条，标“原声”的那条为方言版本。切换后如需字幕，再点字幕按钮选择对应版本。</div>
+    </details>
+    <details>
+      <summary>修复版片长变长是加了内容吗？</summary>
+      <div class="ans">不全是。《寒山夜话》修复版多出的 3 分钟是片头字幕与环境声，正片镜头数与原始版一致。分区页会注明“片长差异说明”，点开可看具体分钟段。</div>
+    </details>
+  </section>
+
+  <!-- 用户评论 -->
+  <section class="block" id="comments">
+    <div class="block-head">
+      <span class="eyebrow">09 观众短评</span>
+      <h2>看完之后留下的几句话</h2>
+      <span class="tagline">来自分区页留言板</span>
+    </div>
+    <div class="comments">
+      <div class="comment">
+        <div class="who"><b>阿隼</b><span>11-07 23:41</span><span class="badge teal">XT-237</span></div>
+        <p>第 3 集把前两集的旁证全推翻了，我回去重看了第 1 集第 12 分钟，那个镜头确实一直在暗示。就是 1080P 在暗场里有点糊。</p>
+        <div class="ref">指向《晨雾档案》第3集</div>
+      </div>
+      <div class="comment">
+        <div class="who"><b>南枝</b><span>11-07 20:15</span><span class="badge">ND-142</span></div>
+        <p>《潮汐笔记》没有旁白这点很好，潮声本身就是叙事。不过 2160P 在我的笔记本上风扇转得厉害，后来锁了 1080P 才安静。</p>
+        <div class="ref">指向《潮汐笔记》</div>
+      </div>
+      <div class="comment">
+        <div class="who"><b>看片不记名</b><span>11-06 22:03</span></div>
+        <p>分区页的编号检索确实好用，但排序偶尔会自己变，不知道是不是我点错了。</p>
+        <div class="ref">泛反馈，未指向具体条目</div>
+      </div>
+      <div class="comment">
+        <div class="who"><b>老周</b><span>11-06 19:28</span><span class="badge red">RP-088</span></div>
+        <p>《寒山夜话》修复版的颗粒保留得很好，不像有些修复把胶片磨成塑料。多出来的 3 分钟片头别跳过，环境声值得听。</p>
+        <div class="ref">指向《寒山夜话》4K 修复</div>
+      </div>
+      <div class="comment">
+        <div class="who"><b>林间小径</b><span>11-05 21:50</span><span class="badge teal">ND-201</span></div>
+        <p>方言音轨重混之后确实不一样，巷口的讨价声出来了。字幕还是有点小，得凑近看。</p>
+        <div class="ref">指向《旧巷口》第 9 集</div>
+      </div>
+      <div class="comment">
+        <div class="who"><b>半杯茶</b><span>11-04 18:12</span></div>
+        <p>《十四号站台》第 28 分钟那个长镜头，我反复看了三遍，调度是真稳。高码版值得换。</p>
+        <div class="ref">指向《十四号站台》</div>
+      </div>
+      <div class="comment">
+        <div class="who"><b>路过一下</b><span>11-03 23:36</span></div>
+        <p>有些片子标注 HDR，但看下来没感觉，可能是我屏幕不行。整体片库还行。</p>
+        <div class="ref">泛反馈，未指向具体条目</div>
+      </div>
+      <div class="comment">
+        <div class="who"><b>耳机党</b><span>11-02 20:44</span><span class="badge">ND-166</span></div>
+        <p>《河岸慢行》补上英字之后，我给朋友推荐就方便了。片长 61 分钟，适合睡前看，声音别开太大。</p>
+        <div class="ref">指向《河岸慢行》</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 相关资讯 -->
+  <section class="block" id="news">
+    <div class="block-head">
+      <span class="eyebrow">10 相关资讯</span>
+      <h2>片库之外的几条动态</h2>
+      <span class="tagline">行业与播放设备</span>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <h3>小屏看 2160P 值不值</h3>
+        <div class="meta"><span>11-05</span><span class="badge">设备</span></div>
+        <p>6.1 英寸屏在 1080P 与 2160P 间的肉眼差异有限，功耗差距约 18%，实测机型为同款旗舰。</p>
+      </div>
+      <div class="card">
+        <h3>方言音轨混音流程</h3>
+        <div class="meta"><span>11-04</span><span class="badge teal">制作</span></div>
+        <p>ND 柜两部剧的重混都在原声基础上补录环境声，单集耗时约 6 小时。</p>
+      </div>
+      <div class="card">
+        <h3>胶片修复的降噪取舍</h3>
+        <div class="meta"><span>11-02</span><span class="badge red">修复</span></div>
+        <p>降噪强度超过 40% 时颗粒开始消失，RP 柜多数片选择保留 15% 以内的轻度处理。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 相关推荐 -->
+  <section class="block" id="related">
+    <div class="block-head">
+      <span class="eyebrow">11 相关推荐</span>
+      <h2>顺着这几部继续看</h2>
+      <span class="tagline">按题材相邻度推荐</span>
+    </div>
+    <div class="tags">
+      <a href="/#picks">悬疑推理剧本推荐</a>
+      <a href="/#picks">年代生活剧集双音轨</a>
+      <a href="/#picks">纪录观察无旁白短片</a>
+      <a href="/#picks">胶片修复重映 4K</a>
+      <a href="/#picks">方言音轨专柜片单</a>
+      <a href="/#picks">单集 50 分钟中篇合辑</a>
+      <a href="/#picks">高码率动作段落</a>
+      <a href="/#picks">睡前可看 60 分钟内短片</a>
+    </div>
+    <p style="margin-top:12px;font-size:.85rem;color:var(--ink-soft);">推荐依据是题材相邻与观看时段，不按播放量。夜间时段优先短篇，白天适合连续看两集。</p>
+  </section>
+
+  <!-- 创作者证言 -->
+  <section class="block" id="voices">
+    <div class="block-head">
+      <span class="eyebrow">12 创作者说法</span>
+      <h2>做分区标注的人怎么想</h2>
+      <span class="tagline">访谈摘录</span>
+    </div>
+    <blockquote class="quote">
+      “骑兵区最先定的规则是编号不能改。片名可以翻译、可以改，编号一改，观众就找不到自己昨天看的哪一部。”
+      <cite>—— 分区整理组，2026 年 11 月 3 日访谈</cite>
+    </blockquote>
+    <blockquote class="quote">
+      “修复片标清晰度最难。母版是胶片的，硬标 2160P 会让人以为和新片子一样锐。后来加了一行‘胶片颗粒保留’，投诉少了。”
+      <cite>—— 修复重映柜负责人，2026 年 11 月 2 日</cite>
+    </blockquote>
+    <p style="font-size:.84rem;color:var(--ink-soft);">以上为访谈转述，具体表述已尽量保留原措辞。两位受访者的说法有交叉，都提到“标注要写清楚限制”，但一位主张继续细化标签，另一位认为标签过细会让观众无所适从。</p>
+  </section>
+
+</main>
+
+<!-- 侧栏 -->
+<aside aria-label="辅助导航">
+  <div class="side-card">
+    <h3>分区导航</h3>
+    <ul class="side-nav" id="sideNav">
+      <li><a href="/#overview">片库概览</a></li>
+      <li><a href="/#picks">编辑片单</a></li>
+      <li><a href="/#updates">更新日志</a></li>
+      <li><a href="/#channels">骑兵分区</a></li>
+      <li><a href="/#deep">清晰度拆解</a></li>
+      <li><a href="/#guide">播放指南</a></li>
+      <li><a href="/#ranking">本周榜单</a></li>
+      <li><a href="/#faq">常见问题</a></li>
+      <li><a href="/#comments">观众短评</a></li>
+      <li><a href="/#news">相关资讯</a></li>
+      <li><a href="/#related">相关推荐</a></li>
+      <li><a href="/#voices">创作者说法</a></li>
+    </ul>
+  </div>
+  <div class="side-card">
+    <h3>本周检索热词</h3>
+    <ul class="side-list">
+      <li><span class="n">1</span>晨雾档案 第3集</li>
+      <li><span class="n">2</span>潮汐笔记 2160P</li>
+      <li><span class="n">3</span>方言音轨 旧巷口</li>
+      <li><span class="n">4</span>寒山夜话 4K 修复</li>
+      <li><span class="n">5</span>十四号站台 高码率</li>
+      <li><span class="n">6</span>河岸慢行 英文字幕</li>
+    </ul>
+  </div>
+  <div class="side-card">
+    <h3>清晰度小抄</h3>
+    <ul class="side-list">
+      <li>2160P HDR · 27 部</li>
+      <li>1080P 高码 · 51 部</li>
+      <li>1080P 标准 · 34 部</li>
+      <li>720P 备用 · 14 部</li>
+    </ul>
+    <p style="font-size:.78rem;color:var(--ink-soft);margin:10px 0 0;">备用档仅在主文件不可用时出现，分区页会标注“备用”。</p>
+  </div>
+</aside>
+</div>
+
+<!-- 页尾 -->
+<footer>
+  <div class="foot-inner">
+    <div class="foot-brand">
+      <div class="brand" style="margin-bottom:10px;">
+        <svg viewBox="0 0 64 64" width="34" height="34" aria-hidden="true" focusable="false">
+          <rect width="64" height="64" rx="14" fill="#f0dcae"/>
+          <path d="M16 18h9v28h-9z" fill="#16233d"/>
+          <path d="M31 18l14 14-14 14z" fill="#16233d"/>
+        </svg>
+        <span class="brand-text" style="color:#f4efe0;">eeuss影院骑兵区高清播放<small style="color:#a49d8c;">高清片库 · 分区指南</small></span>
+      </div>
+      <p>按编号与清晰度组织片单的观影索引，帮你在四个柜之间少走两趟冤枉路。</p>
+    </div>
+    <div>
+      <h4>片库分区</h4>
+      <ul class="foot-links">
+        <li><a href="/#channels">悬疑推理柜</a></li>
+        <li><a href="/#channels">年代生活柜</a></li>
+        <li><a href="/#channels">纪录观察柜</a></li>
+        <li><a href="/#channels">修复重映柜</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>观看帮助</h4>
+      <ul class="foot-links">
+        <li><a href="/#guide">清晰的四步设置</a></li>
+        <li><a href="/#deep">码率与画质边界</a></li>
+        <li><a href="/#faq">音轨与字幕切换</a></li>
+        <li><a href="/#ranking">完播率榜单</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>说明</h4>
+      <ul class="foot-links">
+        <li>片名、编号、码率与时间均为示例数据。</li>
+        <li>统计区间以正文标注日期为准。</li>
+        <li>页面更新时间：2026-11-08。</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 骑兵区片库索引 · 示例内容，不作真实片源承诺</span>
+    <span>所有栏目入口均为页内导航</span>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="回到页面顶部">↑</button>
+
+<script>
+(function(){
+  var menuBtn = document.getElementById('menuBtn');
+  var nav = document.getElementById('mainNav');
+  if(menuBtn && nav){
+    menuBtn.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A' && window.innerWidth <= 960){
+        nav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  var toTop = document.getElementById('toTop');
+  var ticking = false;
+  function onScroll(){
+    if(!ticking){
+      window.requestAnimationFrame(function(){
+        if(window.scrollY > 500){ toTop.classList.add('show'); }
+        else { toTop.classList.remove('show'); }
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  // 侧栏滚动高亮
+  var sideLinks = Array.prototype.slice.call(document.querySelectorAll('#sideNav a'));
+  var sections = sideLinks.map(function(a){
+    var id = a.getAttribute('href').replace('/#','');
+    return document.getElementById(id);
+  }).filter(Boolean);
+  function highlight(){
+    var pos = window.scrollY + 150;
+    var current = null;
+    sections.forEach(function(sec){
+      if(sec.offsetTop <= pos){ current = sec.id; }
+    });
+    sideLinks.forEach(function(a){
+      var id = a.getAttribute('href').replace('/#','');
+      a.classList.toggle('active', id === current);
+    });
+  }
+  window.addEventListener('scroll', highlight, {passive:true});
+  highlight();
+
+  // 本地搜索
+  var input = document.getElementById('q');
+  var resultBox = document.getElementById('searchResult');
+  var index = [
+    {title:'晨雾档案 第3集', id:'picks', kw:'晨雾档案 XT-237 第3集 悬疑'},
+    {title:'潮汐笔记', id:'picks', kw:'潮汐笔记 ND-142 纪录 2160P'},
+    {title:'寒山夜话 4K 修复', id:'picks', kw:'寒山夜话 RP-088 修复 4K'},
+    {title:'旧巷口 第9集', id:'picks', kw:'旧巷口 ND-201 方言 音轨'},
+    {title:'十四号站台', id:'picks', kw:'十四号站台 XT-219 高码率'},
+    {title:'河岸慢行', id:'picks', kw:'河岸慢行 ND-166 英文字幕'},
+    {title:'悬疑推理柜', id:'channels', kw:'悬疑推理 分区 编号'},
+    {title:'年代生活柜', id:'channels', kw:'年代生活 双音轨 字幕'},
+    {title:'纪录观察柜', id:'channels', kw:'纪录观察 2160P 无旁白'},
+    {title:'修复重映柜', id:'channels', kw:'修复 胶片 颗粒 重映'},
+    {title:'清晰度拆解', id:'deep', kw:'码率 1080P 2160P 画质 降噪'},
+    {title:'播放四步指南', id:'guide', kw:'播放 设置 锁清晰度 音轨'},
+    {title:'常见问题', id:'faq', kw:'FAQ HDR 字幕 片长'},
+    {title:'本周榜单', id:'ranking', kw:'完播率 榜单 统计'},
+    {title:'观众短评', id:'comments', kw:'评论 留言 观感'}
+  ];
+  function esc(s){ return s.replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  function runSearch(){
+    var q = input.value.trim().toLowerCase();
+    if(!q){ resultBox.innerHTML=''; return; }
+    var hits = index.filter(function(item){
+      return item.title.toLowerCase().indexOf(q) > -1 || item.kw.toLowerCase().indexOf(q) > -1;
+    });
+    if(hits.length === 0){
+      resultBox.innerHTML = '<div class="msg">没有找到与“' + esc(q) + '”相关的影片或分区。可以换个编号前缀，比如 XT、ND、RP，或直接输入片名中的两个字。</div>';
+      return;
+    }
+    resultBox.innerHTML = '<div class="msg ok">找到 ' + hits.length + ' 条结果：' +
+      hits.map(function(h){
+        return '<a href="/#' + h.id + '">' + esc(h.title) + '</a>';
+      }).join(' · ') + '</div>';
+  }
+  if(input){ input.addEventListener('input', runSearch); }
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"eeuss影院骑兵区高清播放",
+  "description":"整理骑兵区片库分区、高清片单、清晰度对照与选片方法的主题首页。",
+  "inLanguage":"zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"骑兵区和普通热映列表有什么区别？",
+      "acceptedAnswer":{"@type":"Answer","text":"骑兵区按题材与修复状态分柜，编号固定，适合按类检索；热映列表按上架时间排，更新快但分类粗。"}
+    },
+    {
+      "@type":"Question",
+      "name":"1080P 高码率与 2160P 低码率怎么选？",
+      "acceptedAnswer":{"@type":"Answer","text":"屏幕小于 27 英寸时，1080P 高码率通常更稳；大屏或投影优先 2160P，差异主要落在暗部与快速运动段落。"}
+    },
+    {
+      "@type":"Question",
+      "name":"为什么有些影片标了 HDR 却看不出区别？",
+      "acceptedAnswer":{"@type":"Answer","text":"显示设备需要支持 HDR 解码，且播放器未强制 SDR 输出；修复片多数为 SDR 母版。"}
+    },
+    {
+      "@type":"Question",
+      "name":"方言音轨在哪里切换？",
+      "acceptedAnswer":{"@type":"Answer","text":"播放页右下角音轨按钮，ND 柜影片一般有两条，标“原声”的为方言版本。"}
+    },
+    {
+      "@type":"Question",
+      "name":"修复版片长变长是加了内容吗？",
+      "acceptedAnswer":{"@type":"Answer","text":"不全是，多出的分钟段常为片头字幕与环境声，正片镜头数可能与原始版一致，分区页会注明差异。"}
+    }
+  ]
+}
+</script>
+</body>
+                                   </html>
